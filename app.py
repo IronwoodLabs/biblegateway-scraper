@@ -9,7 +9,7 @@ if len(argv) == 3:
     version = argv[2]
     url = 'http://www.biblegateway.com/passage/?search=%s&version=%s' % (urllib.parse.quote_plus(query), version)
 else:
-    url = 'http://www.biblegateway.com/passage/?search=%s&version=RVR1960' % (urllib.parse.quote_plus(query))
+    url = 'http://www.biblegateway.com/passage/?search=%s&version=NASB' % (urllib.parse.quote_plus(query))
 
 def print_info(container):
     for child in container:
@@ -25,6 +25,6 @@ if r.status_code == 200:
     if container:
         print_info(container)
     else:
-        print ('Disculpa! No conozco "%s", intenta otra vez' %query)
+        print ('Sorry! I do not know "%s", try again' %query)
 else:
-    print ('Hubo un error procesando tu pedido, por favor intenta nuevamente')
+    print ('There was an error processing your order, please try again')
