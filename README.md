@@ -1,4 +1,4 @@
-# BibleGateway Scrapper
+# BibleGateway Scraper
 
 This is a simple scrapper made with Python and BeautifulSoup.
 
